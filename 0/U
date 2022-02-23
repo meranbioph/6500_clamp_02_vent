@@ -1,0 +1,106 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    inlet_n1
+    {
+      type            uniformFixedValue;
+      uniformValue    constant (4.86 -6.84 18.15);
+    }
+    inlet_n2
+    {
+      type            uniformFixedValue;
+      uniformValue    constant (4.86 -6.84 18.15);
+    }
+    inlet_n3
+    {
+      type            uniformFixedValue;
+      uniformValue    constant (4.86 -6.84 18.15);
+    }
+    inlet_n4
+    {
+      type            uniformFixedValue;
+      uniformValue    constant (4.86 -6.84 18.15);
+    }
+    inlet_n5
+    {
+      type            uniformFixedValue;
+      uniformValue    constant (4.86 -6.84 18.15);
+    }
+    inlet_n6
+    {
+      type            uniformFixedValue;
+      uniformValue    constant (4.86 -6.84 18.15);
+    }
+    inlet_s1
+    {
+      type            uniformFixedValue;
+      uniformValue    constant (0 0 -20);
+    }
+    inlet_s2
+    {
+      type            uniformFixedValue;
+      uniformValue    constant (0 0 -20);
+    }
+    inlet_s3
+    {
+      type            uniformFixedValue;
+      uniformValue    constant (0 0 -20);
+    }
+    inlet_s4
+    {
+      type            uniformFixedValue;
+      uniformValue    constant (0 0 -20);
+    }
+    inlet_s5
+    {
+      type            uniformFixedValue;
+      uniformValue    constant (0 0 -20);
+    }
+    inlet_s6
+    {
+      type            uniformFixedValue;
+      uniformValue    constant (0 0 -20);
+    }
+    ground
+    {
+        type            noSlip;
+    }
+    south
+    {
+        type            symmetryPlane;
+    }
+    north
+    {
+        type            symmetryPlane;
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    pipe
+    {
+        type            noSlip;
+    }
+
+}
+
+// ************************************************************************* //

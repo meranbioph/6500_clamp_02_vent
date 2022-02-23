@@ -1,0 +1,109 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0.375;
+
+boundaryField
+{
+    inlet_n1
+    {
+      type            fixedValue;
+      value           uniform 0.375;
+    }
+    inlet_n2
+    {
+      type            fixedValue;
+      value           uniform 0.375;
+    }
+    inlet_n3
+    {
+      type            fixedValue;
+      value           uniform 0.375;
+    }
+    inlet_n4
+    {
+      type            fixedValue;
+      value           uniform 0.375;
+    }
+    inlet_n5
+    {
+      type            fixedValue;
+      value           uniform 0.375;
+    }
+    inlet_n6
+    {
+      type            fixedValue;
+      value           uniform 0.375;
+    }
+    inlet_s1
+    {
+      type            fixedValue;
+      value           uniform 0.375;
+    }
+    inlet_s2
+    {
+      type            fixedValue;
+      value           uniform 0.375;
+    }
+    inlet_s3
+    {
+      type            fixedValue;
+      value           uniform 0.375;
+    }
+    inlet_s4
+    {
+      type            fixedValue;
+      value           uniform 0.375;
+    }
+    inlet_s5
+    {
+      type            fixedValue;
+      value           uniform 0.375;
+    }
+    inlet_s6
+    {
+      type            fixedValue;
+      value           uniform 0.375;
+    }
+    ground
+    {
+      type            kqRWallFunction;
+      value           uniform 0.375;
+    }
+    south
+    {
+        type            symmetryPlane;
+    }
+    north
+    {
+        type            symmetryPlane;
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    pipe
+    {
+      type            kqRWallFunction;
+      value           uniform 0.375;
+    }
+}
+
+
+// ************************************************************************* //
